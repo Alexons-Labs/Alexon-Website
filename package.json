@@ -1,0 +1,34 @@
+{
+  "name": "alexons-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "logo:trace": "node scripts/trace-logo.mjs",
+    "logo:assets": "node scripts/emit-assets.mjs",
+    "logo:icons": "node scripts/emit-icons.mjs",
+    "logo:verify": "node scripts/check-mask.mjs",
+    "shots": "node scripts/shoot.mjs"
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "resend": "^6.28.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "playwright-core": "^1.63.0",
+    "postcss": "^8.5.0",
+    "potrace": "^2.1.8",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0"
+  }
+}
