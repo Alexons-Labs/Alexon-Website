@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import AboutStory from "@/components/AboutStory";
 import Values from "@/components/Values";
+import Team from "@/components/Team";
 import VisionBand from "@/components/VisionBand";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function AboutPage() {
       />
       <AboutStory />
       <Values />
+      <Team />
       <VisionBand
         eyebrow="Vision"
         title={

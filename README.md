@@ -82,12 +82,17 @@ email directly, so the form degrades honestly.
 
 ## Still to come
 
-- Real case studies in `lib/projects.ts` (shared by the homepage and `/work`).
+- Real case studies in `lib/projects.ts` (shared by the homepage's upcoming
+  Selected Work section and `/work`). The list is intentionally empty for now;
+  `/work` renders an honest "building in public" state until the first
+  products ship.
 - Real open roles in `components/CareersIndex.tsx`.
 - `components/Metrics.tsx` is built but deliberately not on the homepage;
   add it once the numbers are real.
 - Only GitHub is linked in `lib/nav.ts` — add LinkedIn/Instagram once the
   accounts exist.
+- The founders (M S Arul, Kishore Kumar R) live in `components/Team.tsx` on
+  `/about`, with email and `tel:` links.
 
 ## QA
 
