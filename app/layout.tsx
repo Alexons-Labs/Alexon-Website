@@ -116,12 +116,20 @@ const SCHEMA_ORG = JSON.stringify({
         "https://github.com/alexon-labs",
         "https://www.instagram.com/alexon.in",
       ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91-8122034711",
-        email: "alexonlabs@gmail.com",
-        contactType: "customer support",
-      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-8122034711",
+          email: "alexonlabs@gmail.com",
+          contactType: "customer support",
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-8122034711",
+          email: "alexonlabsofficial@gmail.com",
+          contactType: "general inquiries",
+        },
+      ],
     },
     {
       "@type": "WebSite",

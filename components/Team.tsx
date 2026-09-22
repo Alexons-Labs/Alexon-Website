@@ -1,4 +1,4 @@
-import { EMAIL, PHONE, PHONE_DISPLAY } from "@/lib/nav";
+import { EMAIL, EMAIL_SECONDARY, PHONE, PHONE_DISPLAY } from "@/lib/nav";
 
 export default function Team() {
   return (
@@ -15,7 +15,7 @@ export default function Team() {
               For technology inquiries, partnership discussions, or engineering consultation, connect with us directly.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-14 gap-y-8">
+            <div className="mt-10 flex flex-wrap items-start gap-x-14 gap-y-8">
               <div>
                 <span className="eyebrow block text-mid">Phone</span>
                 <a
@@ -28,12 +28,20 @@ export default function Team() {
 
               <div>
                 <span className="eyebrow block text-mid">Email</span>
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="display link-sweep mt-2 inline-block text-xl text-ink md:text-2xl"
-                >
-                  {EMAIL}
-                </a>
+                <div className="mt-2 space-y-1.5">
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="display link-sweep block text-xl text-ink md:text-2xl"
+                  >
+                    {EMAIL}
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL_SECONDARY}`}
+                    className="display link-sweep block text-xl text-ink md:text-2xl"
+                  >
+                    {EMAIL_SECONDARY}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

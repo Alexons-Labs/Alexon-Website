@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { EMAIL, NAV_LINKS, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
+import { EMAIL, EMAIL_SECONDARY, NAV_LINKS, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
 
 export default function Footer() {
   return (
@@ -75,6 +75,12 @@ export default function Footer() {
                 className="link-sweep block break-all text-base text-white/80 sm:break-normal sm:text-lg"
               >
                 {EMAIL}
+              </a>
+              <a
+                href={`mailto:${EMAIL_SECONDARY}`}
+                className="link-sweep block break-all text-base text-white/80 sm:break-normal sm:text-lg"
+              >
+                {EMAIL_SECONDARY}
               </a>
             </div>
           </div>

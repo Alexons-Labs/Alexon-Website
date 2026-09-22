@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { EMAIL, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
+import { EMAIL, EMAIL_SECONDARY, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -65,9 +65,12 @@ export default function Contact() {
                 {PHONE_DISPLAY}
               </a>
             </div>
-            <div>
+            <div className="space-y-2">
               <a href={`mailto:${EMAIL}`} className="link-sweep display block break-all text-base normal-case sm:break-normal sm:text-xl">
                 {EMAIL}
+              </a>
+              <a href={`mailto:${EMAIL_SECONDARY}`} className="link-sweep display block break-all text-base normal-case sm:break-normal sm:text-xl">
+                {EMAIL_SECONDARY}
               </a>
             </div>
             <ul className="pt-4 flex flex-wrap gap-x-8 gap-y-3">
