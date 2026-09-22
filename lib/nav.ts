@@ -12,6 +12,7 @@ export const SOCIALS = [
   { label: "GitHub", href: "https://github.com/alexon-labs" },
 ] as const;
 
-// Primary contact. Secondary address (alexonlabs@gmail.com) is kept for
-// backups only — add it here if the official inbox ever changes.
-export const EMAIL = "alexonlabsofficial@gmail.com";
+// Primary contact details
+export const EMAIL = "alexonlabs@gmail.com";
+export const PHONE = "8122034711";
+export const PHONE_DISPLAY = "+91 81220 34711";

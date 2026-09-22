@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { EMAIL, SOCIALS } from "@/lib/nav";
+import { EMAIL, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -59,11 +59,18 @@ export default function Contact() {
             </span>
           </h2>
 
-          <div className="reveal mt-10 sm:mt-14" style={{ "--reveal-delay": "260ms" } as React.CSSProperties}>
-            <a href={`mailto:${EMAIL}`} className="link-sweep display break-all text-base normal-case sm:break-normal sm:text-xl">
-              {EMAIL}
-            </a>
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+          <div className="reveal mt-10 space-y-4 sm:mt-14" style={{ "--reveal-delay": "260ms" } as React.CSSProperties}>
+            <div>
+              <a href={`tel:+91${PHONE}`} className="link-sweep display block text-base sm:text-xl">
+                {PHONE_DISPLAY}
+              </a>
+            </div>
+            <div>
+              <a href={`mailto:${EMAIL}`} className="link-sweep display block break-all text-base normal-case sm:break-normal sm:text-xl">
+                {EMAIL}
+              </a>
+            </div>
+            <ul className="pt-4 flex flex-wrap gap-x-8 gap-y-3">
               {SOCIALS.map((s) => (
                 <li key={s.label}>
                   <a

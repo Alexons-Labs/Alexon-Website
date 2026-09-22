@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { EMAIL, NAV_LINKS, SOCIALS } from "@/lib/nav";
+import { EMAIL, NAV_LINKS, PHONE, PHONE_DISPLAY, SOCIALS } from "@/lib/nav";
 
 export default function Footer() {
   return (
@@ -63,12 +63,20 @@ export default function Footer() {
               ))}
             </div>
 
-            <a
-              href={`mailto:${EMAIL}`}
-              className="link-sweep mt-6 inline-block break-all text-base text-white/80 sm:break-normal sm:text-lg"
-            >
-              {EMAIL}
-            </a>
+            <div className="mt-6 space-y-2">
+              <a
+                href={`tel:+91${PHONE}`}
+                className="link-sweep block text-base text-white/80 sm:text-lg"
+              >
+                {PHONE_DISPLAY}
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="link-sweep block break-all text-base text-white/80 sm:break-normal sm:text-lg"
+              >
+                {EMAIL}
+              </a>
+            </div>
           </div>
 
           <nav className="md:col-span-3" aria-label="Footer">

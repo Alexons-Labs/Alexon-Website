@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-const SUPPORT_EMAIL = "alexonlabsofficial@gmail.com";
+import { EMAIL as SUPPORT_EMAIL } from "@/lib/nav";
 
 type Errors = {
   name?: string;

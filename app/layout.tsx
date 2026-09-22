@@ -111,18 +111,6 @@ const SCHEMA_ORG = JSON.stringify({
       image: "https://alexon.in/og.png",
       description:
         "Alexons is a technology company building intelligent products, platforms and solutions that turn ambitious ideas into real-world impact.",
-      founders: [
-        {
-          "@type": "Person",
-          name: "M S Arul",
-          jobTitle: "Founder & CEO",
-        },
-        {
-          "@type": "Person",
-          name: "Kishore Kumar R",
-          jobTitle: "Co-Founder & CTO",
-        },
-      ],
       sameAs: [
         "https://www.linkedin.com/company/alexon-labs",
         "https://github.com/alexon-labs",
@@ -130,7 +118,8 @@ const SCHEMA_ORG = JSON.stringify({
       ],
       contactPoint: {
         "@type": "ContactPoint",
-        email: "alexonlabsofficial@gmail.com",
+        telephone: "+91-8122034711",
+        email: "alexonlabs@gmail.com",
         contactType: "customer support",
       },
     },
