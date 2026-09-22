@@ -5,7 +5,7 @@ const FOUNDERS = [
     role: "Founder & CEO",
     phone: "8838577150",
     email: "msarul2005@gmail.com",
-    body: "Founded Alexons and leads the company direction — choosing the problems worth solving and the vision behind them.",
+    body: "Founded Alexons and leads the company direction, choosing the problems worth solving and the vision behind them.",
   },
   {
     n: "02",
@@ -13,7 +13,7 @@ const FOUNDERS = [
     role: "Co-Founder & CTO",
     phone: "8122034711",
     email: "kishorekumar26124@gmail.com",
-    body: "Co-founded Alexons and leads engineering — turning ambitious ideas into shipped, working technology.",
+    body: "Co-founded Alexons and leads engineering, turning ambitious ideas into shipped, working technology.",
   },
 ] as const;
 
@@ -35,12 +35,12 @@ export default function FoundersList() {
               className="reveal grid items-start gap-x-10 gap-y-4 border-b border-line py-12 md:grid-cols-12 md:py-14"
               style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
             >
-              <div className="flex items-baseline gap-6 md:col-span-3">
+              <div className="flex items-baseline gap-6 md:col-span-4">
                 <span className="numeral text-sm text-mid">{f.n}</span>
-                <h2 className="display text-4xl md:text-5xl">{f.name}</h2>
+                <h2 className="display whitespace-nowrap text-3xl md:text-4xl">{f.name}</h2>
               </div>
 
-              <p className="eyebrow self-baseline text-mid md:col-span-3 md:pt-2">
+              <p className="eyebrow self-baseline text-mid md:col-span-4 md:pt-2">
                 {f.role}
               </p>
 

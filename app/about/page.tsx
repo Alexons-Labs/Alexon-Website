@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "The story, vision and values behind Alexons — ambitious problems deserve ambitious technology.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -26,6 +29,10 @@ export default function AboutPage() {
           </>
         }
         lede="Alexons is a technology company building products, platforms and intelligent solutions that turn ambitious ideas into real-world impact."
+        image={{
+          src: "/images/about.jpg",
+          alt: "Alexons Hardware and Systems Engineering",
+        }}
       />
       <AboutStory />
       <Values />

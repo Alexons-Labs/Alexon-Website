@@ -17,3 +17,15 @@ scripts/check*.png
 scripts/check*.svg
 scripts/logo-paths.json
 scripts/mark-d.txt
+
+# Logs and debug files
+*.log
+__*
+_tmp/
+Changes.txt
+*.jpeg
+*.mp4
+!public/videos/*.mp4
+
+.vercel
+.env*

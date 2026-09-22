@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Careers",
   description:
     "Open roles and internships at Alexons — for people who want to build, experiment and solve problems that matter.",
+  alternates: {
+    canonical: "/careers",
+  },
 };
 
 export default function CareersPage() {
@@ -21,6 +24,10 @@ export default function CareersPage() {
           </>
         }
         lede="We're looking for people who want to build, experiment and solve problems that matter."
+        image={{
+          src: "/images/careers.jpg",
+          alt: "Alexons Engineering Studio & Team Workspace",
+        }}
       />
       <CareersIndex />
     </>

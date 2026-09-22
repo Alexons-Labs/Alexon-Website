@@ -4,6 +4,9 @@ import Contact from "@/components/Contact";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Tell Alexons what you're building.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

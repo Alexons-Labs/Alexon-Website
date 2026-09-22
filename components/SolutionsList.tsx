@@ -39,6 +39,16 @@ const SOLUTIONS = [
       "Ideas pressure-tested before investment",
     ],
   },
+  {
+    n: "05",
+    title: "Video Editing",
+    lead: "Cutting raw footage into finished, watchable stories — shaping pacing, captions, motion and sound so every second earns attention.",
+    points: [
+      "High-retention storytelling and pacing",
+      "Dynamic captions, sound design and motion",
+      "Multi-platform video assets tailored for engagement",
+    ],
+  },
 ] as const;
 
 export default function SolutionsList() {
@@ -64,7 +74,7 @@ export default function SolutionsList() {
                   <p className="mt-5 max-w-[44ch] text-dark">{s.lead}</p>
                 </div>
 
-                <ul className="space-y-3 md:col-span-5">
+                <ul className="space-y-3 md:col-span-5 md:col-start-8">
                   {s.points.map((point) => (
                     <li key={point} className="flex items-baseline gap-3 text-dark">
                       <span aria-hidden className="arrow text-sm text-mid">

@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import WhoWeAre from "@/components/WhoWeAre";
 import Capabilities from "@/components/Capabilities";
 import Execution from "@/components/Execution";
+import Metrics from "@/components/Metrics";
 import Philosophy from "@/components/Philosophy";
 import AboutIntro from "@/components/AboutIntro";
 import Careers from "@/components/Careers";
@@ -14,7 +15,7 @@ export default function Home() {
       <WhoWeAre />
       <Capabilities />
       <Execution />
-      {/* <Metrics /> — add once the numbers are real. */}
+      <Metrics />
       <Philosophy />
       <AboutIntro />
       <Careers />

@@ -3,15 +3,20 @@ import LogoDraw from "./LogoDraw";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-end overflow-hidden pt-32 pb-16 md:pb-24">
-      <div className="shell grid w-full gap-y-14 lg:grid-cols-12 lg:items-end lg:gap-x-10">
-        <div className="intro-stagger lg:col-span-8">
-          <p className="eyebrow text-mid" style={{ "--stagger": "0ms" } as React.CSSProperties}>
-            Alexons — Technology / Innovation
-          </p>
+    <section className="relative flex min-h-[100svh] items-center pt-28 pb-16 md:pt-32 md:pb-20">
+      <div className="shell grid w-full items-center gap-y-12 lg:grid-cols-12 lg:gap-x-12">
+        <div className="intro-stagger lg:col-span-7">
+          <div
+            className="flex items-center gap-3.5"
+            style={{ "--stagger": "0ms" } as React.CSSProperties}
+          >
+            <span className="signature text-3xl leading-none text-ink md:text-4xl">Alexons</span>
+            <span className="text-line text-lg font-light">/</span>
+            <p className="eyebrow text-mid">Technology &#215; Innovation</p>
+          </div>
 
           <h1
-            className="display display-xl mt-8"
+            className="display display-xl mt-7"
             style={{ "--stagger": "120ms" } as React.CSSProperties}
           >
             We Build
@@ -20,7 +25,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="lede mt-9 text-dark"
+            className="lede mt-8 text-dark"
             style={{ "--stagger": "260ms" } as React.CSSProperties}
           >
             We create intelligent technology, digital products, and solutions
@@ -28,7 +33,7 @@ export default function Hero() {
           </p>
 
           <div
-            className="mt-11 flex flex-wrap items-center gap-4"
+            className="mt-10 flex flex-wrap items-center gap-4"
             style={{ "--stagger": "380ms" } as React.CSSProperties}
           >
             <Link href="/solutions" className="btn btn-solid group">
@@ -42,23 +47,21 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* The mark at a scale that makes it a graphic element, not a badge.
-            From lg it leaves the grid and anchors to the section edge, so the
-            bleed is a fixed slice of the viewport rather than whatever falls
-            out of the column maths; the loop runs off the page, the sharp
-            ascent stays whole. */}
-        <div className="pointer-events-none lg:absolute lg:right-[-4vw] lg:bottom-[9vh] lg:col-span-4">
-          <LogoDraw
-            id="hero"
-            className="ml-auto h-auto w-[72%] max-w-[520px] min-w-[210px] translate-x-[6%] text-ink sm:w-[54%] lg:h-[58svh] lg:w-auto lg:max-w-none lg:translate-x-0"
-            title="Alexons"
-          />
+        {/* The brand mark — fully framed, beautifully scaled, and centered in the right column */}
+        <div className="flex items-center justify-center lg:col-span-5 lg:justify-end">
+          <div className="w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] xl:max-w-[460px]">
+            <LogoDraw
+              id="hero"
+              className="h-auto w-full text-ink"
+              title="Alexons"
+            />
+          </div>
         </div>
       </div>
 
       <span
         aria-hidden
-        className="eyebrow absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-mid md:block"
+        className="eyebrow absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-mid md:block"
       >
         Scroll
       </span>

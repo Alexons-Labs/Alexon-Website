@@ -1,3 +1,4 @@
+import CareersForm from "./CareersForm";
 import { EMAIL } from "@/lib/nav";
 
 const PILLARS = [
@@ -103,6 +104,9 @@ export default function CareersIndex() {
               </li>
             ))}
           </ul>
+
+          <CareersForm />
+
           <div className="rule" />
 
           <p className="eyebrow reveal mt-14 text-mid">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Allura, Inter, Space_Grotesk } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
@@ -19,6 +19,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const allura = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-allura",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://alexon.in"),
   title: {
@@ -30,13 +37,30 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alexons — Building intelligent technology for what comes next.",
     description:
-      "A technology company building intelligent products and solutions.",
-    url: "/",
+      "A technology company building intelligent products, platforms and solutions that turn ambitious ideas into real-world impact.",
+    url: "https://alexon.in",
     siteName: "Alexons",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Alexons — Building intelligent technology for what comes next",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alexons — Building intelligent technology for what comes next.",
+    description:
+      "A technology company building intelligent products, platforms and solutions that turn ambitious ideas into real-world impact.",
+    images: ["/og.png"],
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/logo.svg", type: "image/svg+xml" },
       { url: "/icon.png", sizes: "512x512", type: "image/png" },
     ],
@@ -49,6 +73,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
   themeColor: "#000000",
   colorScheme: "light",
 };
@@ -72,13 +99,68 @@ try {
 }
 `;
 
+const SCHEMA_ORG = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexon.in/#organization",
+      name: "Alexons",
+      url: "https://alexon.in",
+      logo: "https://alexon.in/logo.svg",
+      image: "https://alexon.in/og.png",
+      description:
+        "Alexons is a technology company building intelligent products, platforms and solutions that turn ambitious ideas into real-world impact.",
+      founders: [
+        {
+          "@type": "Person",
+          name: "M S Arul",
+          jobTitle: "Founder & CEO",
+        },
+        {
+          "@type": "Person",
+          name: "Kishore Kumar R",
+          jobTitle: "Co-Founder & CTO",
+        },
+      ],
+      sameAs: [
+        "https://www.linkedin.com/company/alexon-labs",
+        "https://github.com/alexon-labs",
+        "https://www.instagram.com/alexon.in",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "alexonlabsofficial@gmail.com",
+        contactType: "customer support",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexon.in/#website",
+      url: "https://alexon.in",
+      name: "Alexons",
+      publisher: {
+        "@id": "https://alexon.in/#organization",
+      },
+    },
+  ],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${inter.variable} ${allura.variable}`}
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: INTRO_FLAG }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: SCHEMA_ORG }}
+        />
       </head>
       <body>
         <Preloader />

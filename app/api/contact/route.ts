@@ -30,6 +30,12 @@ export async function POST(request: Request) {
   }
 
   const data = body as Record<string, unknown>;
+
+  // Honeypot trap: if filled, quietly succeed without dispatching
+  if (data.company_website) {
+    return NextResponse.json({ ok: true });
+  }
+
   const name = clean(data.name, MAX.name);
   const email = clean(data.email, MAX.email);
   const brief = clean(data.brief, MAX.brief);

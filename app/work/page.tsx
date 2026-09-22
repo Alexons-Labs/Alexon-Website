@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "Selected products, projects and case studies built by Alexons across AI, software and automation.",
+  alternates: {
+    canonical: "/work",
+  },
 };
 
 export default function WorkPage() {
@@ -14,8 +17,12 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Work"
         title={<>Things We&rsquo;ve Built.</>}
-        lede="Selected products, projects and case studies from across AI, software and automation."
-        status="Case studies being prepared"
+        lede="Selected client platforms, commercial web applications, and in-house technology products engineered by Alexons."
+        status="6 Active Projects &amp; Deployments"
+        image={{
+          src: "/images/work_hero.jpg",
+          alt: "Alexons Digital Products & Software Engineering Laboratory",
+        }}
       />
       <WorkIndex />
     </>

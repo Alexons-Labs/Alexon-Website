@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alexons - Calligraphy Font Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Mr+Dafoe&family=Great+Vibes&family=Sacramento&family=Dancing+Script:wght@400;600&family=Pacifico&family=Kaushan+Script&family=Yellowtail&family=Allura&family=Parisienne&family=Alex+Brush&family=Caveat:wght@400;600&family=Style+Script&family=Norican&family=Damion&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fbfaf7;
+    --ink: #141412;
+    --mid: #6b6a64;
+    --line: #e6e2d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 3rem 5vw 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0 0 .4rem; font-size: 1.1rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+  header p { margin: 0; color: var(--mid); font-size: .95rem; max-width: 60ch; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 5vw 5rem; }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 4rem 6rem;
+  }
+  .spec {
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+  }
+  .spec .meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.25rem; }
+  .spec .name { font-weight: 700; font-size: .95rem; }
+  .spec .tag { color: var(--mid); font-size: .8rem; }
+  .sig { font-size: 4rem; line-height: 1.1; margin: 0 0 .9rem; min-height: 1.2em; }
+  .sig.small { font-size: 2.6rem; }
+  .sample { color: var(--mid); font-size: 1.05rem; line-height: 1.7; margin: 0; }
+  .sample b { color: var(--ink); font-weight: 600; }
+  .sample .at { color: var(--ink); }
+  .reference { grid-column: 1 / -1; }
+  .reference .sig { font-family: "Space Grotesk", sans-serif; }
+  .f-belle { font-family: "La Belle Aurore", cursive; }
+  .f-dafoe { font-family: "Mr Dafoe", cursive; }
+  .f-vibes { font-family: "Great Vibes", cursive; }
+  .f-sacramento { font-family: "Sacramento", cursive; }
+  .f-dancing { font-family: "Dancing Script", cursive; }
+  .f-pacifico { font-family: "Pacifico", cursive; }
+  .f-kaushan { font-family: "Kaushan Script", cursive; }
+  .f-yellowtail { font-family: "Yellowtail", cursive; }
+  .f-allura { font-family: "Allura", cursive; }
+  .f-parisienne { font-family: "Parisienne", cursive; }
+  .f-alexbrush { font-family: "Alex Brush", cursive; }
+  .f-caveat { font-family: "Caveat", cursive; }
+  .f-style { font-family: "Style Script", cursive; }
+  .f-norican { font-family: "Norican", cursive; }
+  .f-damion { font-family: "Damion", cursive; }
+  .note { grid-column: 1 / -1; color: var(--mid); font-size: .9rem; line-height: 1.7; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Alexons — Calligraphy Font Preview</h1>
+  <p>Current display face is Space Grotesk (reference card at the bottom). Pick the calligraphy you prefer for the logo / hero / display type. Body stays Inter for readability.</p>
+</header>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="spec">
+      <div class="meta"><div class="name">La Belle Aurore</div><div class="tag">elegant · editorial</div></div>
+      <p class="sig f-belle">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Mr Dafoe</div><div class="tag">stylish · swashy</div></div>
+      <p class="sig f-dafoe">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Great Vibes</div><div class="tag">classic calligraphy</div></div>
+      <p class="sig f-vibes">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Sacramento</div><div class="tag">smooth · clean</div></div>
+      <p class="sig f-sacramento">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Dancing Script</div><div class="tag">warm · friendly</div></div>
+      <p class="sig f-dancing">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Pacifico</div><div class="tag">bold · retro</div></div>
+      <p class="sig f-pacifico">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Kaushan Script</div><div class="tag">energetic brush</div></div>
+      <p class="sig f-kaushan">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Yellowtail</div><div class="tag">thick–thin brush</div></div>
+      <p class="sig f-yellowtail">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Allura</div><div class="tag">thin · refined</div></div>
+      <p class="sig f-allura">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Parisienne</div><div class="tag">delicate · French</div></div>
+      <p class="sig f-parisienne">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Alex Brush</div><div class="tag">traditional script</div></div>
+      <p class="sig f-alexbrush">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Caveat</div><div class="tag">handwritten · casual</div></div>
+      <p class="sig f-caveat">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Style Script</div><div class="tag">modern · bold script</div></div>
+      <p class="sig f-style">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Norican</div><div class="tag">flowing · calligraphy</div></div>
+      <p class="sig f-norican">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec">
+      <div class="meta"><div class="name">Damion</div><div class="tag">casual · playful</div></div>
+      <p class="sig f-damion">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <div class="spec reference">
+      <div class="meta"><div class="name">Space Grotesk (current display)</div><div class="tag">reference</div></div>
+      <p class="sig">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span class="at">intelligent technology</span>.</p>
+    </div>
+
+    <p class="note">
+      Open this file in a browser (double-click it), or it loads automatically on your local dev server.
+      My recommendation for the brand: <b>La Belle Aurore</b> or <b>Mr Dafoe</b> — elegant signature-style
+      calligraphy that contrasts cleanly with Space Grotesk accents and keeps the dark minimal identity.
+      Let me know which one and I'll wire it into <code>app/layout.tsx</code> + <code>app/globals.css</code>.
+    </p>
+
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alexons — Final Font Face-Off</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fbfaf7;
+    --ink: #141412;
+    --mid: #6b6a64;
+    --line: #e6e2d8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  header { padding: 3rem 5vw 1.5rem; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0 0 .4rem; font-size: 1.1rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+  header p { margin: 0; color: var(--mid); font-size: .95rem; max-width: 66ch; line-height: 1.6; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 2.5rem 5vw 5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 4rem 6rem; }
+  .finalist { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.4rem; }
+  .name { font-size: 1.35rem; font-weight: 700; }
+  .tag { color: var(--mid); font-size: .85rem; }
+  .sig { font-size: 5.5rem; line-height: 1.1; margin: 0 0 1.25rem; }
+  .f-allura { font-family: "Allura", cursive; font-weight: 400; }
+  .sample { color: var(--mid); font-size: 1.1rem; line-height: 1.75; margin: 0; }
+  .sample b { color: var(--ink); font-weight: 600; }
+  .note { grid-column: 1 / -1; color: var(--mid); font-size: .92rem; line-height: 1.7; border-top: 1px solid var(--line); padding-top: 1.25rem; margin-top: 1rem; }
+  .license { display: inline-block; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 999px; padding: .3rem .75rem; margin-left: .5rem; vertical-align: middle; }
+  .ls-free { border-color: #3a7d44; color: #3a7d44; }
+  .ls-paid { border-color: #b25a2b; color: #b25a2b; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Alexons — Final Font Face-Off</h1>
+  <p>Two finalists side by side. Pick one and I'll make it the display/calligraphy face in <code>app/layout.tsx</code> + <code>app/globals.css</code> (and point the hero + "Alexons" wordmark at it here on localhost).</p>
+</header>
+<div class="wrap">
+  <div class="grid">
+
+    <div class="finalist">
+      <div class="meta">
+        <div class="name">Allura</div>
+        <div class="tag">elegant · flowing<span class="license ls-free">free license</span></div>
+      </div>
+      <p class="sig f-allura">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span style="color:var(--ink)">intelligent technology</span>.</p>
+    </div>
+
+    <div class="finalist">
+      <div class="meta">
+        <div class="name">Orange Avenue</div>
+        <div class="tag">brush · ligature serif<span class="license ls-paid">commercial license</span></div>
+      </div>
+      <p class="sig" style="font-family:'Orange Avenue',cursive">Alexons</p>
+      <p class="sample"><b>Alexons</b> turning ambition into <span style="color:var(--ink)">intelligent technology</span>.</p>
+      <p class="note">Orange Avenue isn't on Google Fonts. It ships as <code>.otf</code> from Krismagraph/MyFonts and needs a paid commercial license for brand use. To preview it here, drop the <code>.otf</code> into <code>public/fonts/</code> and tell me — I'll self-host it with <code>next/font/local</code>.</p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

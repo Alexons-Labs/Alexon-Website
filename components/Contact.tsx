@@ -46,7 +46,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="band border-t border-line">
-      <div className="shell grid gap-y-16 lg:grid-cols-12 lg:gap-x-16">
+      <div className="shell grid items-center gap-y-16 lg:grid-cols-12 lg:gap-x-16">
         <div className="lg:col-span-5">
           <p className="eyebrow reveal text-mid">Contact</p>
 
@@ -59,8 +59,8 @@ export default function Contact() {
             </span>
           </h2>
 
-          <div className="reveal mt-14" style={{ "--reveal-delay": "260ms" } as React.CSSProperties}>
-            <a href={`mailto:${EMAIL}`} className="link-sweep display text-xl normal-case">
+          <div className="reveal mt-10 sm:mt-14" style={{ "--reveal-delay": "260ms" } as React.CSSProperties}>
+            <a href={`mailto:${EMAIL}`} className="link-sweep display break-all text-base normal-case sm:break-normal sm:text-xl">
               {EMAIL}
             </a>
             <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
@@ -86,8 +86,8 @@ export default function Contact() {
           style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
         >
           {FIELDS.map((field) => (
-            <p key={field.name} className="group mb-10">
-              <label htmlFor={field.name} className="eyebrow block text-mid">
+            <p key={field.name} className="group mb-10 text-left">
+              <label htmlFor={field.name} className="eyebrow block text-left text-mid">
                 {field.label}
               </label>
               <input
@@ -96,12 +96,24 @@ export default function Contact() {
                 type={field.type}
                 required
                 autoComplete={field.autoComplete}
-                className="mt-4 w-full border-b border-line bg-transparent pb-3 text-lg outline-none transition-colors duration-500 focus:border-ink"
+                className="mt-4 w-full border-b border-line bg-transparent pb-3 text-left text-lg outline-none transition-colors duration-500 focus:border-ink"
               />
             </p>
           ))}
 
-          <div className="mt-12 flex flex-wrap items-center justify-end gap-6">
+          {/* Invisible honeypot field to block automated spambots */}
+          <div aria-hidden="true" className="hidden" style={{ display: "none" }}>
+            <label htmlFor="company_website">Website</label>
+            <input
+              id="company_website"
+              name="company_website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 text-center">
             {message && (
               <p
                 role="status"

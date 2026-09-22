@@ -112,7 +112,7 @@ export default function Nav() {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="eyebrow lg:hidden"
+              className="eyebrow flex min-h-[44px] min-w-[44px] items-center justify-center p-2 lg:hidden"
             >
               {open ? "Close" : "Menu"}
             </button>
@@ -129,7 +129,7 @@ export default function Nav() {
         className="on-dark fixed inset-0 z-40 bg-ink text-paper lg:hidden"
       >
         <nav
-          className="shell flex h-full flex-col justify-center gap-2 pt-20"
+          className="shell flex h-full flex-col justify-center gap-2 overflow-y-auto pt-24 pb-12"
           aria-label="Mobile"
         >
           {NAV_LINKS.map((link, i) => (

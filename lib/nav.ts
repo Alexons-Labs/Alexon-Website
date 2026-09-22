@@ -7,6 +7,8 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SOCIALS = [
+  { label: "Instagram", href: "https://www.instagram.com/alexon.in?stkn=MTRoZ3pwdDVtanBkOA==" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/alexon-labs" },
   { label: "GitHub", href: "https://github.com/alexon-labs" },
 ] as const;
 

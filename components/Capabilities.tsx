@@ -21,6 +21,11 @@ const CAPABILITIES = [
     title: "Experimentation",
     body: "Turning emerging technologies into practical products and opportunities.",
   },
+  {
+    n: "05",
+    title: "Video Editing",
+    body: "Cutting raw footage into finished, watchable stories - shaping pacing, captions, motion and sound so every second earns attention.",
+  },
 ] as const;
 
 export default function Capabilities() {
